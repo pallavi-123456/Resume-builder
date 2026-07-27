@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink500 font-body antialiased transition-colors duration-200;
+  }
+
+  html.dark body {
+    @apply bg-ink-950 text-slate-100;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    @apply outline-none ring-2 ring-navy-500 ring-offset-2 ring-offset-paper;
+  }
+
+  html.dark a:focus-visible,
+  html.dark button:focus-visible,
+  html.dark input:focus-visible,
+  html.dark textarea:focus-visible,
+  html.dark select:focus-visible {
+    @apply ring-gold-400 ring-offset-ink-950;
+  }
+}
+
+@layer components {
+  
+  
+  .seal-ring {
+    background: conic-gradient(from -90deg, var(--seal-color, #c9a227) var(--seal-pct, 0%), rgba(201, 162, 39, 0.15) 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
