@@ -5,11 +5,8 @@ dns.setServers(["8.8.8.8", "8.8.4.4"]);
 
 const express = require("express");
 const cors = require("cors");
-app.use(cors({
-  origin:
-  "https://resume-builder-git-main-pallavi14.vercel.app",
-  credentials: true,
-}));
+
+
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const connectDB = require("./config/db");
@@ -21,7 +18,6 @@ const resumeRoutes = require("./routes/resumeRoutes");
 const analysisRoutes = require("./routes/analysisRoutes");
 
 connectDB();
-
 const app = express();
 
 app.use(
