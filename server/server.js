@@ -7,7 +7,7 @@ const express = require("express");
 const cors = require("cors");
 app.use(cors({
   origin:
-  "https://resume-builder-git-main-pallavi14.vercel.app/",
+  "https://resume-builder-git-main-pallavi14.vercel.app",
   credentials: true,
 }));
 const morgan = require("morgan");
